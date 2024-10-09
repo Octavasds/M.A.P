@@ -78,4 +78,36 @@ public class ex3 {
 
         return Arrays.copyOfRange(arr, nonZeroIndex, arr.length);
     }
+
+    public static int[] multiplication(int[] num, int multi){
+        num = reverseArray(num);
+
+        int[] product = new int[num.length];
+        int carry = 0;
+
+        for (int i = 0; i < num.length; i++) {
+            int total = num[i] * multi + carry;
+            product[i] = total % 10;
+            carry = total / 10;
+        }
+
+        if (carry > 0) {
+            product[num.length] = carry;
+        }
+
+        return reverseArray(product);
+    }
+
+    public static int[] divide(int[] num, int div) {
+        int[] quot = new int[num.length];
+        int remainder = 0;
+
+        for (int i = 0; i < num.length; i++) {
+            int current = remainder * 10 + num[i];
+            quot[i] = current / div;
+            remainder = current % div;
+        }
+
+        return removeLeadingZeros(quot);
+    }
 }

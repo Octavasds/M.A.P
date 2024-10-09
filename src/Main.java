@@ -41,5 +41,18 @@ public class Main {
         int[] diff=ex3.subtractArrays(num3,num4);
         for(int el:diff)
             System.out.print(el+" ");
+        System.out.println();
+
+        int[] num5={2,3,6,0,0,0,0,0,0};
+        int[] product=ex3.multiplication(num5,2);
+        for(int el:product)
+            System.out.print(el+" ");
+        System.out.println();
+
+        int[] num6={2,3,6,0,0,0,0,0,0};
+        int[] division=ex3.divide(num6,2);
+        for(int el:division)
+            System.out.print(el+" ");
+        System.out.println();
     }
 }
