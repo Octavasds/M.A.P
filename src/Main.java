@@ -1,15 +1,27 @@
-
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        int[] grades = {29, 37, 38, 41, 84, 67};
+        ArrayList<Integer> insuf_gr = ex1.insufficient_grades(grades);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        for (int gr : insuf_gr) {
+            System.out.print(gr+" ");
         }
+
+        System.out.println();
+
+        System.out.printf("%.2f",ex1.mean_grades(grades));
+
+        System.out.println();
+
+        ArrayList<Integer> rounded_gr = ex1.rounded_grades(grades);
+        for (int gr : rounded_gr) {
+            System.out.print(gr+" ");
+        }
+
+        System.out.println();
+
+        System.out.println(ex1.greatest(grades));
     }
 }
