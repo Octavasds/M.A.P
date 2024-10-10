@@ -54,5 +54,27 @@ public class Main {
         for(int el:division)
             System.out.print(el+" ");
         System.out.println();
+
+
+        int[] price_keyboard={40,35,70,15,45};
+        System.out.println(ex4.billigste_tastatur(price_keyboard));
+
+        int[] price_keyboard1={15,20,10,35};
+        int[] price_usb={20,15,40,15};
+        System.out.println(ex4.teuerste(price_keyboard1,price_usb));
+
+        int[] price_usb1={15,45,20};
+        int budget=30;
+        System.out.println(ex4.teuerste_usb(price_usb1,budget));
+
+
+        int[] price_usb2={8,12};
+        int[] price_keyboard2={40,50,60};
+        budget*=2;
+        System.out.println(ex4.max_spend(price_keyboard2,price_usb2,budget));
+        int[] price_keyboard3={60};
+        System.out.println(ex4.max_spend(price_keyboard3,price_usb2,budget));
+        int[] price_keyboard4={40,60};
+        System.out.println(ex4.max_spend(price_keyboard4,price_usb2,budget));
     }
 }
